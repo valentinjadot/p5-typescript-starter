@@ -8,7 +8,7 @@
     "start-run": "browser-sync start --server -w",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "format:fix": "prettier . --write"
+    "format": "prettier . --write"
   },
   "devDependencies": {
     "@types/p5": "^1.3.3",

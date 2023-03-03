@@ -1,4 +1,3 @@
-
 # P5 TypeScript Starter
 
 This project will quickly get you something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/).
@@ -37,7 +36,7 @@ A local version will now be running on [localhost:3000](http://localhost:3000).
 
 P5 is able to run in either [global or instance mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode).
 
-This starter project uses **global mode** by default to bring it in line with most of the online resources provided by the project. 
+This starter project uses **global mode** by default to bring it in line with most of the online resources provided by the project.
 
 As stated on the P5 wiki:
 
@@ -99,14 +98,14 @@ To use an external library, e.g. [qrcode-generator](https://www.npmjs.com/packag
 3. Import via `global.d.ts`.
 
    ```typescript
-   import qrcode = require('qrcode-generator');
+   import qrcode = require("qrcode-generator");
    ```
 
 4. Use in `sketch.ts`.
 
    ```typescript
-   var qr = qrcode(4, 'L');
-   qr.addData('https://github.com/Gaweph/p5-typescript-starter');
+   var qr = qrcode(4, "L");
+   qr.addData("https://github.com/Gaweph/p5-typescript-starter");
    qr.make();
 
    text(qr.createASCII(), 1, 1);

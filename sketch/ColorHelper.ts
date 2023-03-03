@@ -22,17 +22,17 @@ class ColorHelper {
     if (baseColorArray == null) {
       baseColorArray = ColorHelper.rainbowColorBase();
     }
-    var rainbowColors = baseColorArray.map((x) => this.getColorVector(x));
+    const rainbowColors = baseColorArray.map((x) => this.getColorVector(x));
 
-    let colours = new Array<p5.Color>();
-    for (var i = 0; i < total; i++) {
-      var colorPosition = i / total;
-      var scaledColorPosition = colorPosition * (rainbowColors.length - 1);
+    const colours = new Array<p5.Color>();
+    for (let i = 0; i < total; i++) {
+      const colorPosition = i / total;
+      const scaledColorPosition = colorPosition * (rainbowColors.length - 1);
 
-      var colorIndex = Math.floor(scaledColorPosition);
-      var colorPercentage = scaledColorPosition - colorIndex;
+      const colorIndex = Math.floor(scaledColorPosition);
+      const colorPercentage = scaledColorPosition - colorIndex;
 
-      var nameColor = this.getColorByPercentage(
+      const nameColor = this.getColorByPercentage(
         rainbowColors[colorIndex],
         rainbowColors[colorIndex + 1],
         colorPercentage
@@ -50,11 +50,11 @@ class ColorHelper {
     percentage: number
   ) {
     // assumes colors are p5js vectors
-    var firstColorCopy = firstColor.copy();
-    var secondColorCopy = secondColor.copy();
+    const firstColorCopy = firstColor.copy();
+    const secondColorCopy = secondColor.copy();
 
-    var deltaColor = secondColorCopy.sub(firstColorCopy);
-    var scaledDeltaColor = deltaColor.mult(percentage);
+    const deltaColor = secondColorCopy.sub(firstColorCopy);
+    const scaledDeltaColor = deltaColor.mult(percentage);
     return firstColorCopy.add(scaledDeltaColor);
   }
 }

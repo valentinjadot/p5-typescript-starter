@@ -5,8 +5,8 @@ class PolygonHelper {
     const radius = width / 2;
     beginShape();
     for (let a = 0; a < TWO_PI; a += angle) {
-      let sx = cos(a) * radius;
-      let sy = sin(a) * radius;
+      const sx = cos(a) * radius;
+      const sy = sin(a) * radius;
       vertex(sx, sy);
     }
     endShape(CLOSE);

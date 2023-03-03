@@ -33,7 +33,7 @@ function draw() {
   const speed = (frameCount / (numberOfShapes * 30)) * 2;
 
   // DRAW ALL SHAPES
-  for (var i = 0; i < numberOfShapes; i++) {
+  for (let i = 0; i < numberOfShapes; i++) {
     push();
     const lineWidth = 8;
     const spin = speed * (numberOfShapes - i);
